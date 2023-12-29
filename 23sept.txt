@@ -1,0 +1,119 @@
+1. Create a simple page with some div tags and show different ways to add CSS as well as what happens when you target the same elements with inline, internal, and external CSS. Also, utilize comments in the project where required.
+
+SOLUTIONS==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<style>
+    .title{color: blue;} /*internal*/
+</style>
+<body>
+    <div style="color: red;">inline</div>  <!--inline-->
+    <div class="title">internal</div>
+    <div class="sub-tittle">external</div>
+</body>
+</html>
+
+style.css.external{  .sub-tittle{color: green;}}
+
+==>>in between them the priority order is shown : inline>internal>extrenal
+
+
+2. Build an HTML page with multiple paragraphs, each assigned a unique class name. Write CSS rules using class selectors to apply distinct styling to each paragraph. Follow the BEM naming convention and explain how you've named the classes.
+
+solution==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .karnataka .female{ color: green;}
+        #delhi .male{color: red;}
+        .gujrat .female{background-color: chartreuse;color: blueviolet;}
+    </style>
+</head>
+<body>
+    <h1>karnataka</h1>
+    <div class="karnataka">
+        <h4 class="female">female</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">male</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">male</h4>
+    </div>
+<h1>delhi</h1>
+    <div id="delhi">
+        <h4 class="female">female</h4>
+        <h4 class="male">male</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">male</h4>
+    </div>
+    <h1>gujrat</h1>
+    <div class="gujrat">
+            <button class="female"> female</button>
+    </div>
+</body>
+</html>
+
+
+3. Develop an HTML form with various input elements. Use CSS to style the form, including setting background colors for input fields. Create a custom color palette for the form elements, and demonstrate how to apply opacity to one of the form sections.
+
+SOLUTIONS==
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+                <style>
+                    .firstname{color: white; background-color: brown;}
+                    .email{color: aliceblue; background-color: green;}
+                    .password{color: aliceblue; background-color: blue;}
+                    .register{background-color: blueviolet;} button {opacity: 50%;}
+                </style>
+<body>
+    <form>
+        <label for="firstname">firstname:
+            <input type="text" name="firstname" class="firstname" placeholder="firstname" id="firstname">
+         </label>
+<br>
+            <label for="email">email:
+                <input type="text" name="email" class="email" placeholder="karmakar@49" id="email">
+            </label>
+<br>
+<label for="password">password:
+            <input type="password" name="password" class="password" placeholder="password" id="password">
+        </label>
+<br>
+            <label for="age">age:
+                <input type="number" name="age" class="age" placeholder="age"  id="age">
+            </label>
+<br>
+        <label for="">gender:
+            <input type="radio" name="gender" id="male" value="male" >  <label for="male">male</label>
+            <input type="radio" name="gender" id="female" >  <label for="female">female</label>
+            <input type="radio" name="gender" id="lgbtq" >  <label for="lgbtq">lgbtq</label>
+        </label>
+<br>
+
+            <label for="terms">TERMS:
+                <input type="checkbox" name="terms" id="terms" class="terms"> <label for="">i agree to the terms and conditions</label>
+            </label>
+<br>
+
+            <button type="submit" class="register">REGISTER</button>
+    </form>
+</body>
+</html>
