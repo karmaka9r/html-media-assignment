@@ -1,0 +1,283 @@
+(1)create a navigation bar similar to the below-mentioned images. the navigation bar must contain 5 navigation links that are properly placed within the navigation bar using the css box model.
+The model links that are properly placed within the navigation bar using the css box model. the navigation items must change their text colour on hover.
+
+SOLUTIONS==
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .aq{background-color: rgb(40, 191, 191);}
+        .a{color: white;}
+    </style>
+</head>
+<body>
+    <div class="aq">
+    <a href="#">Home</a>
+
+    <a href="#">About us</a>
+    <a href="#">Contact</a>
+    <a href="#">Blog</a>
+    <a href="#">Login</a>
+    </div>
+</body>
+
+(2)create a div centred with image and paragraph similar to the image mentioned below.
+
+SOLUTIONS==
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+           padding: auto;
+            background-color: yellow;
+            text-align: center;
+            border-radius: 10px;
+            margin: auto;
+            
+        }
+       img{
+        border-radius: 20px;
+
+       }
+      
+    </style>
+</head>
+<body>
+    <div>
+    <img src="https://cdn.pwskills.com/assets/uploads/thumbnails/6568179250c244fbec73aaf4.png" alt="">
+    <p><b>course name</b> pw skills full stack web development</p>
+    </div>
+</body>
+</html>
+
+(3)create a navigation bar similar to queation 1 for each navigation item, use a different border style.
+
+SOLUTIONS==
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .aq{background-color: rgb(40, 191, 191);padding: 10px;}
+        .a{color: white;}
+        .c1{border: dashed;}
+        .c2{border: solid;}
+        .c3{border: dotted;}
+        .c4{border: groove;}
+        .c5{border-style: ridge;}       
+
+    </style>
+</head>
+<body>
+    <div class="aq">
+    <a class="c1" href="#">Home</a>
+    <a class="c2" href="#">About us</a>
+    <a class="c3" href="#">Contact</a>
+    <a class="c4" href="#">Blog</a>
+    <a class="c5" href="#">Login</a>
+    </div>
+</body>
+</html> 
+
+(4)create a simple webpage with an image and make the image circular using border-radius.
+
+SOLUTION==
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tathagata</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<i class="fa-brands fa-youtube"></i>
+
+<style>
+    .container{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(78, 202, 40);
+        text-align: center;
+    }
+    .avtar img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    .content h1{
+       color: red;
+       text-align: center;
+       font-family: 'Roboto', sans-serif;
+       text-shadow: 5px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="avtar">
+    <img src="https://i.pinimg.com/736x/6e/6a/6e/6e6a6e4a24bfb63c83971d604134fa70--the-hindu-ram.jpg" alt="shree ram">
+        </div>
+    
+
+
+    <div    class="content">
+        <h1 >SHREE RAM</h1>
+    </div>
+    </div>
+</body>
+</html>
+
+(5)create a simple blog website about google fonts. the webpage must have the heading with "Oswald" fonts align centre to the page , below the heading have an image of google fonts and a paragraph about google fonts in 
+font "Montserrat" paragraph font style should be "montserrat" font.
+
+SOLUTIONS==
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .c1{ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: center;}
+        p{font-family: "Monsterrat" , sans-serif;}
+   </style>
+</head>
+<body>
+    <div>
+        <h1 class="c1">Google Fonts</h1>
+        <img src="data:image/jpeg;base64,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" alt="">
+        <p>Google Fonts (formerly known as Google Web Fonts) is a computer font and web font service owned by Google. This includes free and open source font families, an interactive web directory for browsing the library, and APIs for using the fonts via CSS[2] and Android.[3] Google Fonts is also used With the Google Workspace (Such as Docs, Sheets, Drawings and Slides).
+
+            Popular fonts in the Google Fonts library include Roboto, Open Sans, Lato, Oswald, Montserrat, and Source Sans Pro.[4]</p>
+    
+<h4>History</h4>
+        <p>
+            Google Fonts was launched in 2010[5] and revamped in 2011,[6] 2016,[7] and 2020.[8]
+            
+            On March 3, 2020, Google updated the catalog website with support for variable fonts.[citation needed] On March 2, 2021, the Google Fonts team announced they were adding support for open source icons.[9] </p>
+<h4>Font library</h4>            
+          <p>  
+            As of December 2023, Google Fonts had 1,587 font families, including 357 variable font families.[10]
+            
+            The library is maintained through Google Fonts' GitHub repository, where all font files can be obtained directly. Source files for many of the fonts are available from git repositories within the Google Fonts' GitHub organization, along with libre software tools used by the Google Fonts community.</p>
+   
+        </div>
+</body>
+
+
+</html>
+
+(6)CREATE A SIMPLE WEBSITE AS MENTIONED IN THE BELOW IMAGE.
+
+SOLUTIONS===
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c{text-align: center;border-style: solid;}
+       
+    </style>
+</head>
+<body>
+    <div class="c">
+        <h1 class="c1">About Us</h1>
+        <p>PW Skills' mission is to permeate through every student/professional's outlook towards jobs and change their attitude and perspective from "How Can I Do It?" to "Of Course I Can Do It". We aim to do this by providing exceptional up skilling courses at affordable rates, while being tech-forward so anyone, anywhere can access and improve their ability to be successful in life.</p>
+        <img src="https://pwskills.com/images/aboutUs/aboutUs.png" alt="">
+        
+    
+    </div>
+    
+</body>
+</html>
+
+
+(7)CREATE A SIMPLE WEBPAGE WITH A CARD SIMILAR TO QUESTION NUMBER 2. THE CARD MUST BE SEMI-TRANSPARENT AS DEFAULT AND ON HOVERING THE CARD MUST BE DISPLAYED CLEARLY. USE CSS OPACITY TO ACHIEVE THIS OUTPUT.
+
+SOLUTIONS===
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+           padding: auto;
+            background-color: yellow;
+            text-align: center;
+            border-radius: 10px;
+            margin: auto;
+            opacity: 0.7;
+            border-style: solid;
+            
+        }
+        div:hover{opacity: 1;}
+       .c1{
+        border-radius: 20px;
+
+       }
+      
+    </style>
+</head>
+<body>
+    <div>
+    <img class="c1" src="https://cdn.pwskills.com/assets/uploads/thumbnails/6568179250c244fbec73aaf4.png" alt="">
+    <p><b>course name</b> pw skills full stack web development</p>
+    </div>
+</body>
+</html>
+
+
+(8)CREATE A SIMPLE LIST OF ITEMS AS MENTIONED IN THE BELOW IMAGE.
+
+SOLUTIONS===
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style> li{list-style: lower-roman;} </style>
+</head>
+<body>
+    <div>
+        <h1>Requirements</h1>
+        <ul>
+            <li>System eith minimum i3 processor or better</li>
+            <li>At least 4GB of RAM</li>
+            <li>Working internet connections</li>
+            <li>Dedication to learn</li>
+        </ul>
+        
+    </div>
+</body>
+</html>
+
+
