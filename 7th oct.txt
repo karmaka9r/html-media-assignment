@@ -1,0 +1,230 @@
+(Q1)CREATE AN IMAGE GALLERY USING A CSS GRID.
+
+SOLUTIONS===
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery{
+          height: 5vh;
+            background-color: whitesmoke;
+            display: grid;
+            grid-template-areas: 
+            "PIC1 PIC1 PIC3"
+            "PIC4 PIC2 PIC6"
+            "PIC4 PIC5 PIC6"
+            ;
+        }
+        .pic1{
+            grid-area: PIC1;
+           }
+        .pic2{grid-area: PIC2;}
+        .pic3{grid-area: PIC3;}
+        .pic4{grid-area: PIC4;}
+        .pic5{grid-area: PIC5;}
+        .pic6{grid-area: PIC6;}
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="pic pic1">
+            <img src="https://images.pexels.com/photos/276267/pexels-photo-276267.jpeg" alt="pic1" >
+        </div>
+        <div class="pic pic2"><img src="https://images.pexels.com/photos/34299/herbs-flavoring-seasoning-cooking.jpg" alt="pic2"></div>
+        <div class="pic pic3"><img src="https://www.hdwallpapers.in/download/color_paints-wide.jpg" alt="pic3"></div>
+        <div class="pic pic4"><img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg" alt="pic4"></div>
+        <div class="pic pic5"><img src="https://images.pexels.com/photos/6074935/pexels-photo-6074935.jpeg" alt="pic5"></div>
+        <div class="pic pic6"><img src="https://images.pexels.com/photos/4210610/pexels-photo-4210610.jpeg" alt="pic6"></div>
+    </div>
+</body>
+</html>
+
+
+
+(Q2).write a code to arrange containers with texts A,B,C,D as shown in the below image.
+
+SOLUTIONDS===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .container{
+        height: 100vh;
+            background-color: white;
+            display: grid;
+            grid-template-areas: 
+            "A A B"
+            "C D B"
+             ;
+             row-gap: 10px;
+            column-gap: 20px;
+                }
+    .itema{
+        grid-area: A;
+       background-color: darksalmon;
+    }
+    .itemb{
+        grid-area: B;
+       background-color: darksalmon;
+    }
+    .itemc{
+        grid-area: C;
+       background-color: darksalmon;
+    }
+    .itemd{
+        grid-area: D;
+       background-color: darksalmon;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="itema">A</div>
+        <div class="itemb">B</div>
+        <div class="itemc">C</div>
+        <div class="itemd">D</div></div>
+</body>
+</html>
+
+
+(3)Explain the use of grid-auto-row and grid-auto-column using code examples.
+
+Solution==
+
+grid-auto-rows and grid-auto-column properties specify the height and width of rows that are automatically created when there is no explicit row definition and column definition respectively.
+
+Here is an example,
+
+index.html
+
+	<div class="container">
+<div>Item 1</div>
+<div>Item 2</div>
+<div>Item 3</div>
+<div>Item 4</div>
+	</div>
+
+index.css
+
+.container {
+display: grid;
+grid-template-areas: "X X";
+grid-template-rows: 50px;
+grid-auto-rows: 200px;
+}
+
+.container > div {
+border: 1px solid black;
+background-colour: bisque;
+padding: 5px;
+}
+
+This example creates a grid container with three columns defined by grid-template-areas. The first row is displayed with a height of 50px because we have mentioned grid-template-rows for the
+first row as 50px. And the remaining rows will be displayed with a height of 100px, because of the grid-auto-rows:200px property. That's why the second row is displayed with a height of 200px.
+
+(4)WRITE A CSS TO SHOW NUMBERS AS SHOWN IN THE FIGURE, WITHOUT ALTERING THE HTML FILE.
+
+SOLUTIONS==
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .container{
+            height: 40vh;
+            background-color:white;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-content: center;
+            align-content: center;
+            row-gap: 10px;
+            column-gap: 20px;
+        }
+        
+
+        .item{
+            border-style: solid ;
+            background-color: gray;
+        }
+        .itema{
+            border: 1px solid ;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="itema">1</div>
+        <div class="item">2</div>
+        <div class="itema">3</div>
+        <div class="item">4</div>
+        <div class="itema">5</div>
+        <div class="item">6</div>
+        <div class="itema">7</div>
+        <div class="item">8</div>
+    </div>
+</body>
+</html>
+
+
+(5)Explain the difference between justify-items and justify-self using code examples.
+
+Solution==
+
+The main difference between them is that justify-items apply to grid containers and justify-self applies to grid- items.
+Let us understand them by taking an example, below code, for example having 6 grid items arranged in a 3x2 grid.
+
+index.html
+
+	<div class="container">
+<div class="box1">Box 1</div>
+<div class="box2">Box 2</div>
+<div class="box3">Box 3</div>
+<div class="box4">Box 4</div>
+<div class="box5">Box 5</div>
+<div class="box6">Box 6</div>
+	</div>
+
+index.css
+
+.container {
+display: grid;
+grid-template-columns: auto auto auto;
+border: 1px solid black;
+
+}
+
+container > div { .
+padding: 5px;
+ background-color: bisque; 
+border: 1px solid black;
+
+
+Lets apply justify-items: center on grid container,
+
+index.css
+
+.container {
+....
+justify-items: center;
+}
+
+we see that grid items arranged center along the inline axis, within their respective grid cells.
+
+This property allows us to set the default way of justifying each item in their respective grid cells.
+
+justify-self and align-self properties control the alignment of any specific grid item within its grid cell
+ along the horizontal and vertical axes, respectively. The values can be a start, end, center, or stretch.
