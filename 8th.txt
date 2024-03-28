@@ -1,0 +1,225 @@
+(Q1)create a simple page with a header , amain content section , and a footer . apply a media querry that changes the background colour of the header to blue when the screen width is less than 600px.
+
+SOLUTION==
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    header{
+        background-color: aqua;
+        padding: 20px;
+        text-align: center;
+    }
+    @media(max-width: 600px){
+        header{
+            background-color: blueviolet;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>RESPONSIVE HEADER</h1>
+    </header>
+        <main>
+            <p>Main Section</p>
+        </main>
+        <footer>
+            <p>FOOTER</p>
+        </footer>
+    
+</body>
+</html>
+
+(Q2)CREATE AN IMAGE GALLERY WITH THREE IMAGES IN A ROW . USE MEDIA QUERIES TO ADJUST THE LAYOUT TO TWO IMAGES IN A ROW FOR SCREENS SMALLER THAN 800PX AND ONE IMAGE IN A ROW SMALLER THAN 500PX.
+
+SOLUTION===
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+   .image-gallery{
+        
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .image-gallery img{
+        width: 30%;
+        margin: 10px;
+    }
+   @media (max-width:800px){
+    .image-gallery img{
+        width:45%;
+    }
+   }
+   @media (max-width:500px){
+    .image-gallery img{
+        width:100%;
+    }
+   }
+</style>
+</head>
+<body>
+    <div class="image-gallery">
+    <img src="https://fastly.picsum.photos/id/877/200/300.jpg?hmac=kxnqPHdYgfVGqD41ArUXpM0IuUCD2GYefTwBboMDVeA" alt="1">
+    <img src="https://fastly.picsum.photos/id/702/200/300.jpg?hmac=mkz0etLNxZEtcZKYuBuDYD9KewX-7Tv_qsT6aFO0bCU" alt="2">
+    <img src="https://fastly.picsum.photos/id/194/200/300.jpg?hmac=jZgjsqqVvdWnXHdytjS2JPImgQFz9bGSyVQ31-b_eH4" alt="3">
+    </div>
+    
+</body>
+</html>
+
+(Q3)CREATE A NAVIGATION BAR WITH FIVE LINKS. APPLY MEDIA QUERY THAT CONVERTS THE NAVIGATION INTO A VERTICAL LIST FOR SCREENS SMALLER THAN 768PX AND ALSO CHANGES THE BACKGROUND COLOUR TO GRAY.
+
+SOLUTION===
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: darkgrey;
+        
+    }
+    .nav a {
+        color: aliceblue;
+        padding: 10px;
+
+    }
+    @media (max-width:768px){
+        .nav{
+            flex-direction: column;
+            align-items: center;
+
+        }
+    }
+</style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfiloi</a>
+        <a href="#">Contact</a>
+    </nav>
+</body>
+</html>
+
+(Q4) CREATE A GRID BASED LAYOUT CONTAINING FOUR GRID ITEMS WHICH ARRANGES THEM AS THE SCREEN SIZE CHANGES.
+
+SOLUTION===
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent{
+            background-color: grey;
+        }
+        .child{
+            background-color: yellow;
+            width: 25%;
+            height: 200px;
+           
+            display: inline-block;
+        }
+        @media (min-width: 1200px){
+            .child{
+                width: 25%;
+            }
+        }
+        @media (min-width: 700px) and (max-width: 1200px){
+            .child{
+                width: 33.33%;
+            }
+        }
+        @media (min-width: 400px) and (max-width: 700px){
+            .child{
+                width: 50%;
+            }
+        }
+        @media (min-width: 0px) and (max-width: 00px){
+            .child{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+       <div class="child"></div>
+       <div class="child"></div>
+       <div class="child"></div>
+       <div class="child"></div>
+    </div>
+</body>
+</html>
+
+(Q5) CREATE THE BELOW GIVEN LAYOUT USINF THE FLEXBOX IN CSS, WHICH SHOULD ADOPT ITSELF ON MOBILE SCREEN AS PER THE GIVEN BELOW OUTPUT.
+
+SOLUTIONS===
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           .container{
+            display: flex;
+        flex-wrap: wrap;
+        background-color: darkgrey;
+        flex-direction: column;
+        text-align: center;
+        }
+        .footer{
+            text-align: center;
+            padding: 20px;
+        }
+        
+        @media (min-width: 768px){
+            .container{
+                flex-direction: row;
+            }
+            .main{
+                flex:1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">BOX1</div>
+    <div class="main">
+        <div class="sidebar">BOX2</div>
+        <div class="content">BOX3</div>
+    </div>
+    <div class="footer">BOX4</div>
+    </div>
+</body>
+</html>
