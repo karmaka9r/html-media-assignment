@@ -1,0 +1,79 @@
+(Q1)SOLUTION===
+
+_style.css_
+
+nav a{
+    color:rgb(235, 21, 14);
+}
+
+nav > h2 {
+    color: red;
+}
+ul + p{
+   color: red;
+}
+a[href] {
+    color: red;
+    text-decoration: none;
+}
+a[class = "active"]{
+    color: blue;
+    text-decoration: underline;
+}
+a[target="_self"]{
+    background-color: rgb(62, 201, 129);
+}
+p:last-child ::after{
+    content: "...";
+}
+li::marker{
+    color: greenyellow;
+}
+p:nth-child(even)::first-letter{
+    color: red;
+    font-size: 50px;
+}
+
+(Q2)SOLUTION===
+
+_style.css_
+
+ul li a {
+    list-style: none;
+    text-decoration: none;
+}
+ul > li {
+    display: inline;
+}
+li + li {
+    margin : 30px;
+}
+
+(Q3)SOLUTIONS==
+
+_style.css_
+
+h1::after{
+    content: "selector";
+}
+h1::before{
+    content:"pseudo";
+}
+
+(Q4)SOLUTIONS==
+
+_style.css_
+
+button{
+    background-color: cadetblue;
+    margin: 100px;
+    padding: 15px;
+    color: crimson;
+    border-radius: 10px;
+    font-size: medium;
+
+}
+button:hover{
+    cursor: pointer;
+    box-shadow: inset;
+}
